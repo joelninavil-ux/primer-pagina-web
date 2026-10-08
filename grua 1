@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grúas a la puerta de tu proyecto | Oficina Técnica</title>
+    <style>
+        :root {
+            --primary-color: #1a365d;
+            --secondary-color: #d69e2e;
+            --bg-color: #f7fafc;
+            --text-color: #2d3748;
+        }
+        body { font-family: Arial, sans-serif; background-color: var(--bg-color); color: var(--text-color); margin: 0; padding: 0; line-height: 1.6; scroll-behavior: smooth; }
+        header { background-color: var(--primary-color); color: white; padding: 3rem 1rem; text-align: center; }
+        header h1 { margin: 0 0 0.5rem 0; font-size: 2.2rem; }
+        header p { margin: 0; color: #cbd5e0; font-size: 1.1rem; }
+        .container { max-width: 1200px; margin: 2rem auto; padding: 0 1.5rem; }
+        .section-title { text-align: center; color: var(--primary-color); margin: 3rem 0 1.5rem 0; font-size: 1.8rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; }
+        
+        /* Grid de Grúas con imágenes visibles */
+        .grid-cranes { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; }
+        .card { background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.08); overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; }
+        .card-header { background-color: var(--primary-color); color: white; padding: 1rem; text-align: center; }
+        .card-header h3 { margin: 0; font-size: 1.1rem; }
+        .card-img-container { width: 100%; height: 180px; background-color: #ffffff; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid #e2e8f0; overflow: hidden; }
+        .card-img { width: 100%; height: 100%; object-fit: contain; padding: 10px; background-color: #ffffff; }
+        .card-body { padding: 1.2rem; font-size: 0.9rem; }
+        .btn-link { display: block; background-color: var(--secondary-color); color: var(--primary-color); text-align: center; padding: 0.75rem; text-decoration: none; font-weight: bold; border-radius: 4px; margin-top: 1rem; transition: background 0.2s; }
+        .btn-link:hover { background-color: #b7791f; color: white; }
+
+        /* Módulos de Simulación Interactivos */
+        .simulator-section { background: white; padding: 2.5rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.08); margin-bottom: 2.5rem; border-left: 6px solid var(--primary-color); }
+        .simulator-section h3 { color: var(--primary-color); margin-top: 0; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1rem; }
+        @media(max-width: 768px) { .form-row { grid-template-columns: 1fr; } }
+        .form-group label { display: block; font-weight: bold; margin-bottom: 0.3rem; font-size: 0.9rem; }
+        .form-group input, .form-group select { width: 100%; padding: 0.7rem; border: 1px solid #cbd5e0; border-radius: 4px; box-sizing: border-box; }
+        .btn-calc { background-color: var(--secondary-color); color: var(--primary-color); border: none; padding: 0.8rem; font-weight: bold; width: 100%; border-radius: 4px; cursor: pointer; margin-top: 1rem; font-size: 1rem; }
+        .btn-calc:hover { background-color: #b7791f; color: white; }
+        .result-box { margin-top: 1rem; padding: 1rem; border-radius: 6px; font-weight: bold; text-align: center; display: none; font-size: 0.9rem; }
+
+        /* Sección Contáctanos */
+        .contact-section { background-color: var(--primary-color); color: white; padding: 3rem 1.5rem; text-align: center; border-radius: 8px; margin-top: 4rem; }
+        .contact-section h2 { color: var(--secondary-color); margin-top: 0; }
+        .contact-info { display: flex; justify-content: center; gap: 3rem; margin-top: 1.5rem; flex-wrap: wrap; font-size: 1.05rem; }
+        .contact-info div { background: rgba(255,255,255,0.1); padding: 1rem 2rem; border-radius: 6px; }
+
+        footer { text-align: center; padding: 2rem; color: #718096; font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Grúas a la puerta de tu proyecto</h1>
+        <p>Plataforma Integral de Ingeniería de Izaje y Evaluación de Cargas In-Situ</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- SECCIÓN 1: CATALOGO DE FLOTA CON IMÁGENES -->
+        <h2 class="section-title">Flota de Equipos Disponibles</h2>
+        <div class="grid-cranes">
+            
+            <!-- Demag AC 100-4 -->
+            <div class="card">
+                <div>
+                    <div class="card-header"><h3>Demag AC 100-4</h3></div>
+                    <div class="card-img-container">
+                        <img src="ac100_4.png" alt="Demag AC 100-4" class="card-img" onerror="this.src='https://via.placeholder.com/300x180?text=Demag+AC+100-4';">
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Clase:</strong> 100 t (Compacta)[cite: 1]</p>
+                        <p><strong>Aplicación:</strong> Espacios confinados</p>
+                    </div>
+                </div>
+                <div style="padding: 0 1.2rem 1.2rem 1.2rem;">
+                    <a href="#mod-ac100" class="btn-link">Ir al Simulador</a>
+                </div>
+            </div>
+
+            <!-- Demag AC 100-4 L -->
+            <div class="card">
+                <div>
+                    <div class="card-header"><h3>Demag AC 100-4 L</h3></div>
+                    <div class="card-img-container">
+                        <img src="ac100_4l.png" alt="Demag AC 100-4 L" class="card-img" onerror="this.src='https://via.placeholder.com/300x180?text=Demag+AC+100-4+L';">
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Clase:</strong> 100 t (Pluma Larga)[cite: 6]</p>
+                        <p><strong>Aplicación:</strong> Montajes de altura</p>
+                    </div>
+                </div>
+                <div style="padding: 0 1.2rem 1.2rem 1.2rem;">
+                    <a href="#mod-ac100l" class="btn-link">Ir al Simulador</a>
+                </div>
+            </div>
+
+            <!-- Terex AC 140 -->
+            <div class="card">
+                <div>
+                    <div class="card-header"><h3>Terex AC 140</h3></div>
+                    <div class="card-img-container">
+                        <img src="ac140.png" alt="Terex AC 140" class="card-img" onerror="this.src='https://via.placeholder.com/300x180?text=Terex+AC+140';">
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Clase:</strong> 140 t (All Terrain)[cite: 191]</p>
+                        <p><strong>Aplicación:</strong> Izajes pesados</p>
+                    </div>
+                </div>
+                <div style="padding: 0 1.2rem 1.2rem 1.2rem;">
+                    <a href="#mod-ac140" class="btn-link">Ir al Simulador</a>
+                </div>
+            </div>
+
+            <!-- Liebherr LTM 1650-8.1 -->
+            <div class="card">
+                <div>
+                    <div class="card-header"><h3>Liebherr LTM 1650-8.1</h3></div>
+                    <div class="card-img-container">
+                        <img src="ltm1650.png" alt="Liebherr LTM 1650-8.1" class="card-img" onerror="this.src='https://via.placeholder.com/300x180?text=Liebherr+LTM+1650';">
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Clase:</strong> 700 t (VarioBallast)[cite: 224, 229]</p>
+                        <p><strong>Aplicación:</strong> Minería y Energía Eólica[cite: 226]</p>
+                    </div>
+                </div>
+                <div style="padding: 0 1.2rem 1.2rem 1.2rem;">
+                    <a href="#mod-ltm1650" class="btn-link">Ir al Simulador</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- SECCIÓN 2: SIMULADORES OPERATIVOS -->
+        <h2 class="section-title">Módulos de Cálculo y Evaluación en Obra</h2>
+
+        <!-- Módulo 1: Demag AC 100-4 -->
+        <div id="mod-ac100" class="simulator-section">
+            <h3>Demag AC 100-4 - Módulo de Evaluación</h3>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Radio de Operación (m):</label>
+                    <input type="number" id="r_ac100" placeholder="Ej. 8" min="3" max="50">
+                </div>
+                <div class="form-group">
+                    <label>Peso de la Carga (t):</label>
+                    <input type="number" id="p_ac100" placeholder="Ej. 25" min="1" max="100">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Selección de Contrapeso:</label>
+                    <select id="l_ac100">
+                        <option value="5.7">Contrapeso Parcial (5.7 t)</option>
+                        <option value="15.0">Contrapeso Estándar (15.0 t)</option>
+                        <option value="26.1">Contrapeso Máximo (26.1 t)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Factor Eólico (Norma EN 13000):</label>
+                    <select id="v_ac100">
+                        <option value="1.0">Viento Estándar (&le; 9 m/s)[cite: 259]</option>
+                        <option value="0.9">Viento Moderado (Reducción 10%)</option>
+                    </select>
+                </div>
+            </div>
+            <button class="btn-calc" onclick="evaluarAC100()">Evaluar Maniobra AC 100-4</button>
+            <div id="res_ac100" class="result-box"></div>
+        </div>
+
+        <!-- Módulo 2: Demag AC 100-4 L -->
+        <div id="mod-ac100l" class="simulator-section">
+            <h3>Demag AC 100-4 L - Módulo de Evaluación (Pluma 60m)[cite: 6]</h3>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Radio de Operación (m):</label>
+                    <input type="number" id="r_ac100l" placeholder="Ej. 10" min="3" max="60">
+                </div>
+                <div class="form-group">
+                    <label>Peso de la Carga (t):</label>
+                    <input type="number" id="p_ac100l" placeholder="Ej. 20" min="1" max="100">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Selección de Contrapeso:</label>
+                    <select id="l_ac100l">
+                        <option value="5.7">Contrapeso Base (5.7 t)</option>
+                        <option value="18.0">Contrapeso Intermedio (18.0 t)</option>
+                        <option value="32.0">Contrapeso Máximo Pluma Larga (32.0 t)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Factor Eólico (Norma EN 13000):</label>
+                    <select id="v_ac100l">
+                        <option value="1.0">Viento Estándar (&le; 9 m/s)[cite: 259]</option>
+                        <option value="0.9">Viento Moderado (Reducción 10%)</option>
+                    </select>
+                </div>
+            </div>
+            <button class="btn-calc" onclick="evaluarAC100L()">Evaluar Maniobra AC 100-4 L</button>
+            <div id="res_ac100l" class="result-box"></div>
+        </div>
+
+        <!-- Módulo 3: Terex AC 140 -->
+        <div id="mod-ac140" class="simulator-section">
+            <h3>Terex AC 140 - Módulo de Evaluación (140 t)[cite: 191]</h3>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Radio de Operación (m):</label>
+                    <input type="number" id="r_ac140" placeholder="Ej. 12" min="3" max="60">
+                </div>
+                <div class="form-group">
+                    <label>Peso de la Carga (t):</label>
+                    <input type="number" id="p_ac140" placeholder="Ej. 40" min="1" max="140">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Selección de Contrapeso:</label>
+                    <select id="l_ac140">
+                        <option value="15.5">Contrapeso Básico (15.5 t)</option>
+                        <option value="30.0">Contrapeso Intermedio (30.0 t)</option>
+                        <option value="53.0">Contrapeso Máximo (53.0 t)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Factor Eólico (Norma EN 13000):</label>
+                    <select id="v_ac140">
+                        <option value="1.0">Viento Estándar (&le; 9 m/s)[cite: 259]</option>
+                        <option value="0.9">Viento Moderado (Reducción 10%)</option>
+                        <option value="0.8">Viento Crítico (Reducción 20%)</option>
+                    </select>
+                </div>
+            </div>
+            <button class="btn-calc" onclick="evaluarAC140()">Evaluar Maniobra AC 140</button>
+            <div id="res_ac140" class="result-box"></div>
+        </div>
+
+        <!-- Módulo 4: Liebherr LTM 1650-8.1 -->
+        <div id="mod-ltm1650" class="simulator-section">
+            <h3>Liebherr LTM 1650-8.1 - Módulo de Evaluación (VarioBallast)[cite: 229, 232]</h3>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Radio de Operación (m):</label>
+                    <input type="number" id="r_ltm" placeholder="Ej. 16" min="3" max="80">
+                </div>
+                <div class="form-group">
+                    <label>Peso de la Carga (t):</label>
+                    <input type="number" id="p_ltm" placeholder="Ej. 150" min="5" max="700">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Contrapeso Total y VarioBallast:</label>
+                    <select id="l_ltm">
+                        <option value="100">Contrapeso Operativo Estándar (100 t)</option>
+                        <option value="175">Contrapeso Máximo con VarioBallast (175 t)[cite: 229, 232]</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Radio VarioBallast:</label>
+                    <select id="rb_ltm">
+                        <option value="6.4">Radio 6.4 m[cite: 232]</option>
+                        <option value="7.4">Radio 7.4 m[cite: 232]</option>
+                        <option value="8.4">Radio Máximo 8.4 m[cite: 232]</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group" style="grid-column: span 2;">
+                    <label>Condición Eólica (Norma EN 13000):</label>
+                    <select id="v_ltm">
+                        <option value="1.0">Viento Estándar (&le; 9 m/s / 33 km/h)[cite: 259]</option>
+                        <option value="0.9">Viento Moderado (9 - 12 m/s) - Reducción 10%</option>
+                        <option value="0.8">Viento Crítico (> 12 m/s) - Reducción 20%</option>
+                    </select>
+                </div>
+            </div>
+            <button class="btn-calc" onclick="evaluarLTM()">Evaluar Izaje Crítico LTM 1650</button>
+            <div id="res_ltm" class="result-box"></div>
+        </div>
+
+        <!-- SECCIÓN 3: CONTÁCTANOS -->
+        <div id="contacto" class="contact-section">
+            <h2>Contáctanos</h2>
+            <p>¿Requiere una visita técnica especializada o la validación de un plan de izaje crítico in-situ para su proyecto minero?</p>
+            <div class="contact-info">
+                <div>📧 <strong>Correo:</strong> oficina.tecnica@proyectos-izaje.pe</div>
+                <div>📞 <strong>Central de Obra:</strong> +51 (01) 988-555-444</div>
+                <div>📍 <strong>Base Principal:</strong> Lima / Arequipa, Perú</div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Módulo Consolidado de Ingeniería de Izaje | Oficina Técnica - Basado en ISO 4305 y EN 13000[cite: 216, 259].</p>
+    </footer>
+
+    <!-- SCRIPT DE EVALUACIÓN PARA CADA GRÚA -->
+    <script>
+        function mostrarResultado(elementId, esValido, mensaje) {
+            let box = document.getElementById(elementId);
+            box.style.display = 'block';
+            box.style.background = esValido ? '#c6f6d5' : '#fed7d7';
+            box.style.color = esValido ? '#22543d' : '#742a2a';
+            box.innerHTML = mensaje;
+        }
+
+        function evaluarAC100() {
+            let r = parseFloat(document.getElementById('r_ac100').value);
+            let p = parseFloat(document.getElementById('p_ac100').value);
+            let l = parseFloat(document.getElementById('l_ac100').value);
+            let v = parseFloat(document.getElementById('v_ac100').value);
+            if(isNaN(r) || isNaN(p)) { alert('Ingrese valores numéricos válidos.'); return; }
+            let cap = (100 * (4 / Math.max(r, 3)) * (l / 26.1)) * v;
+            mostrarResultado('res_ac100', p <= cap, p <= cap ? `✔ MANIOBRA SEGURO: Carga de ${p}t admisible (${cap.toFixed(1)}t limite).` : `✖ RESTRINGIDO: Supera la capacidad calculada (${cap.toFixed(1)}t).`);
+        }
+
+        function evaluarAC100L() {
+            let r = parseFloat(document.getElementById('r_ac100l').value);
+            let p = parseFloat(document.getElementById('p_ac100l').value);
+            let l = parseFloat(document.getElementById('l_ac100l').value);
+            let v = parseFloat(document.getElementById('v_ac100l').value);
+            if(isNaN(r) || isNaN(p)) { alert('Ingrese valores numéricos válidos.'); return; }
+            let cap = (100 * (4.5 / Math.max(r, 3)) * (l / 32.0)) * v;
+            mostrarResultado('res_ac100l', p <= cap, p <= cap ? `✔ MANIOBRA SEGURO: Carga de ${p}t admisible con pluma larga (${cap.toFixed(1)}t limite).` : `✖ RESTRINGIDO: Excede la tabla de cargas (${cap.toFixed(1)}t).`);
+        }
+
+        function evaluarAC140() {
+            let r = parseFloat(document.getElementById('r_ac140').value);
+            let p = parseFloat(document.getElementById('p_ac140').value);
+            let l = parseFloat(document.getElementById('l_ac140').value);
+            let v = parseFloat(document.getElementById('v_ac140').value);
+            if(isNaN(r) || isNaN(p)) { alert('Ingrese valores numéricos válidos.'); return; }
+            let cap = (140 * (4.5 / Math.max(r, 3)) * (l / 53.0)) * v;
+            mostrarResultado('res_ac140', p <= cap, p <= cap ? `✔ MANIOBRA SEGURO: Carga de ${p}t viable para AC 140 (${cap.toFixed(1)}t limite).` : `✖ RESTRINGIDO: Excede la capacidad operativa (${cap.toFixed(1)}t).`);
+        }
+
+        function evaluarLTM() {
+            let r = parseFloat(document.getElementById('r_ltm').value);
+            let p = parseFloat(document.getElementById('p_ltm').value);
+            let l = parseFloat(document.getElementById('l_ltm').value);
+            let rb = parseFloat(document.getElementById('rb_ltm').value);
+            let v = parseFloat(document.getElementById('v_ltm').value);
+            if(isNaN(r) || isNaN(p)) { alert('Ingrese valores numéricos válidos.'); return; }
+            let factorRB = rb / 6.4;
+            let cap = (700 * (10 / Math.max(r, 4)) * (l / 175) * factorRB) * v;
+            mostrarResultado('res_ltm', p <= cap, p <= cap ? `✔ MANIOBRA SEGURO: Carga de ${p}t viable con VarioBallast a R=${rb}m (${cap.toFixed(1)}t limite).` : `✖ RESTRINGIDO: Momento crítico superado con el radio actual (${cap.toFixed(1)}t).`);
+        }
+    </script>
+</body>
+</html>
